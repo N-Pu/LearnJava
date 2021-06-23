@@ -70,25 +70,70 @@ public class Main {
 //        //test.allUp(mi8);
 //        test.allUp(mi8); // все принимает, я дебил
 //        test.allUp(boeing737);
-        DollySheet dollySheet = new DollySheet();
-        DollySheet dollySheet2 = foo(dollySheet);
+//        DollySheet dollySheet = new DollySheet();
+//        DollySheet dollySheet2 = foo(dollySheet);
+//
+//        dollySheet.setName("Dolly");
+//        dollySheet2.setName("Sheet");
+//
+//        System.out.println(dollySheet.getName());
+//        System.out.println(dollySheet2.getName());
+//
+//
+//    }
+//
+//    public static DollySheet foo(DollySheet dollySheet){
+//        DollySheet sheet = null;
+//        try {
+//            sheet = (DollySheet) dollySheet.clone();
+//        } catch (CloneNotSupportedException e) {
+//            e.printStackTrace();
+//        }
+//        return sheet;
 
-        dollySheet.setName("Dolly");
-        dollySheet2.setName("Sheet");
+//        String str1 = new String("Hot Java Hello");
+//        String str2 = "Java";
+//        String[] strings = str1.split(" "); // массив строк при виде пустого символа делит части строки. Деление строки другой строкой (как же глупо звучит)
+//        char[] charArray = str1.toCharArray(); // разбиение строки посимвольно и каждый символ передается в массив char'ов
+//        for (char element : charArray) {
+//            System.out.println(element);//выводим каждый элемент в консоль
+//        }
+//
+//        System.out.println(str1.compareTo(str2)); //лексикографиеское сравнение с учебом регистра
+//        System.out.println(str1.compareToIgnoreCase(str2)); // лексикографичексое сравнение без учета регистра
+//        System.out.println(str1.codePointAt(1)); // кодировка юникода позиции 1 слова Java (имеется ввиду буква a)
+//        System.out.println(str1.concat(str2));//сложение двух строк, аналогична записи str1+str2
+//        System.out.println(str1.equals(str2));//сравнение объектов, метод принимает объект типа object, т.к все классы унаследованы от object так что можно и строку передать.
+//        System.out.println(str1.equalsIgnoreCase(str2));//тоже что и equals но без учета регистра
+//        System.out.println(str1.hashCode());// хэшкод объекта
+//        System.out.println(str1.indexOf(65));// если симвл 65 совпадает с символом в строке str1 то возвращается 1, иначе -1
+//        System.out.println(str1.isEmpty());// возвращает true если строка пуста
+//        System.out.println(str1.length());//длинна строки
+//
+//        for (String element : strings) {
+//            System.out.println(element);
+//        }
+//
+//
+//        System.out.println(str1.substring(2, 8)); //вырезает кусок из строки от 2 до 8-го.
+//        System.out.println(str1.toLowerCase());// приведение к нижнему регистру
+//        System.out.println(str1.toUpperCase());// приведение к верхнему регистру
+//
+//        System.out.println(str1.trim());// обрезание пробелов в начале строки и в конце
+//
+//        System.out.println(String.valueOf(65)); //превращение переменной int  строку
+//        System.out.println(String.valueOf(charArray));// принимает массив char'ов и преобразует их в строку
 
-        System.out.println(dollySheet.getName());
-        System.out.println(dollySheet2.getName());
+
+//        String str = new String();
+//        StringBuilder stringBuilder = new StringBuilder();
+//        System.out.println(stringBuilder.capacity());
+////        stringBuilder.ensureCapacity(20);
+////        System.out.println(stringBuilder.capacity());
+//        System.out.println(stringBuilder.append(" Hot"));
+//
 
 
     }
 
-    public static DollySheet foo(DollySheet dollySheet){
-        DollySheet sheet = null;
-        try {
-            sheet = (DollySheet) dollySheet.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
-        return sheet;
-    }
 }
