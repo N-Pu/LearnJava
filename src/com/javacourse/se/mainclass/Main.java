@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 import com.javacourse.se.lesson21.Birds;
 import com.javacourse.se.lesson21.Crow;
@@ -170,8 +171,16 @@ public class Main {
                 e.printStackTrace();
             }
 
+
         }
 
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Тест ввода числа: ");
+        int num = in.nextInt();
+        System.out.printf("Число написанное мной: %d \n", num);
+        in.close();
     }
+
 
 }
