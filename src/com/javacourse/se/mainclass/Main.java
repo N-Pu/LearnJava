@@ -1,5 +1,10 @@
 package com.javacourse.se.mainclass;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 import com.javacourse.se.lesson21.Birds;
 import com.javacourse.se.lesson21.Crow;
 import com.javacourse.se.lesson21.Ostrich;
@@ -9,6 +14,7 @@ import com.javacourse.se.lesson23.Weapon;
 import com.javacourse.se.lesson24.Boeing737;
 import com.javacourse.se.lesson24.Mi8;
 import com.javacourse.se.lesson25.DollySheet;
+import com.javacourse.se.lesson29.ErrorExample;
 
 public class Main {
     public static void main(String[] args) {
@@ -133,6 +139,38 @@ public class Main {
 //        System.out.println(stringBuilder.append(" Hot"));
 //
 
+
+        //lesson 29
+
+        // ErrorExample errorExample = new ErrorExample();
+        //  errorExample.foo();
+        FileInputStream fileInputStream = null;
+        InputStreamReader inputStreamReader = null;
+        int b = 0;
+        try {
+            fileInputStream = new FileInputStream("D:/1.txt");
+            inputStreamReader = new InputStreamReader(fileInputStream, "UTF-8");
+            while ((b = inputStreamReader.read()) != -1) {
+                System.out.println((char) b);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                fileInputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            try {
+                inputStreamReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
 
     }
 
